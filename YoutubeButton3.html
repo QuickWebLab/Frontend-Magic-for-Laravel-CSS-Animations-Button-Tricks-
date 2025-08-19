@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YouTube Play Buttons – 3D Model</title>
+  <style>
+    body{
+      margin:0; font-family:Arial, sans-serif; background:#0b0f1a; color:#fff; display:flex; flex-wrap:wrap; gap:30px; justify-content:center; align-items:center; min-height:100vh; padding:40px;
+    }
+
+    .award{
+      width:280px; height:200px; perspective:1200px;
+    }
+
+    .inner{
+      width:100%; height:100%; position:relative; transition:transform 1s; transform-style:preserve-3d; cursor:pointer;
+    }
+
+    .award:hover .inner{ transform:rotateY(180deg); }
+
+    .front, .back{
+      position:absolute; inset:0; border-radius:20px; backface-visibility:hidden; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:10px; font-weight:bold; font-size:1rem; box-shadow:0 10px 20px rgba(0,0,0,0.5), inset 0 2px 4px rgba(255,255,255,0.2);
+    }
+
+    .front{
+      transform:translateZ(20px);
+    }
+
+    .front .gem{
+      width:80px; height:60px; border-radius:14px; background:#fff; display:grid; place-items:center; box-shadow:0 6px 10px rgba(0,0,0,0.4);
+    }
+    .front .gem::before{
+      content:""; width:0; height:0; border-left:22px solid #000; border-top:12px solid transparent; border-bottom:12px solid transparent;
+    }
+
+    .name{
+      font-size:0.9rem; color:#eee; letter-spacing:0.5px; margin-top:6px;
+    }
+
+    .back{
+      transform:rotateY(180deg) translateZ(20px);
+      background:#111; font-size:1.1rem; color:#ff4d5a; justify-content:center; text-align:center; padding:20px;
+    }
+
+    /* Variants */
+    .silver .front{ background:linear-gradient(160deg, #cfd3d6, #b5bcc5, #a4acb8, #d5d9df); }
+    .gold .front{ background:linear-gradient(160deg, #f8e7a0, #f2d06b, #d9b74e, #ffefb0); }
+    .diamond .front{ background:linear-gradient(165deg, #dde7f7, #c8d7f0, #b7c7e3, #eef3fb); }
+    .red .front{ background:linear-gradient(160deg, #6f0a12, #a1121b, #52060a); }
+    .ruby .front{ background:linear-gradient(160deg, #4b0a2b, #6d103f, #7f1148, #2e061a); }
+  </style>
+</head>
+<body>
+
+  <div class="award silver">
+    <div class="inner">
+      <div class="front">
+        <div class="gem"></div>
+        <span>Silver • 100K</span>
+        <div class="name">@quickweblab</div>
+      </div>
+      <div class="back">Silver Edition — Congratulations @quickweblab 🎉</div>
+    </div>
+  </div>
+
+  <div class="award gold">
+    <div class="inner">
+      <div class="front">
+        <div class="gem"></div>
+        <span>Gold • 1M</span>
+        <div class="name">@quickweblab</div>
+      </div>
+      <div class="back">Gold Edition — Congratulations @quickweblab 🏆</div>
+    </div>
+  </div>
+
+  <div class="award diamond">
+    <div class="inner">
+      <div class="front">
+        <div class="gem"></div>
+        <span>Diamond • 10M</span>
+        <div class="name">@quickweblab</div>
+      </div>
+      <div class="back">Diamond Edition — Congratulations @quickweblab 💎</div>
+    </div>
+  </div>
+
+  <div class="award red">
+    <div class="inner">
+      <div class="front">
+        <div class="gem"></div>
+        <span>Red Diamond • 100M</span>
+        <div class="name">@quickweblab</div>
+      </div>
+      <div class="back">Red Diamond Edition — Congratulations @quickweblab ❤️</div>
+    </div>
+  </div>
+
+  <div class="award ruby">
+    <div class="inner">
+      <div class="front">
+        <div class="gem"></div>
+        <span>Ruby • 50M</span>
+        <div class="name">@quickweblab</div>
+      </div>
+      <div class="back">Ruby Edition — Congratulations @quickweblab 💖</div>
+    </div>
+  </div>
+
+</body>
+</html>
